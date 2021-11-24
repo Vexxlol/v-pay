@@ -1,11 +1,11 @@
 <template>
     <nav>
-        <span class="header">V-Pay</span>
+        <span class="header-text">V-Pay</span>
 
-        <span class="action"><a href="#account">Account</a></span>
-        <span class="action"><a href="mailto:support@vpay.com">Support</a></span>
-        <span class="action"><a href="#about">About</a></span>
-        <span class="action"><a href="#home">Home</a></span>
+        <router-link class="action" style="color: white;" to="login">Account</router-link>
+        <router-link class="action" style="color: white;" to="support">Support</router-link>
+        <router-link class="action" style="color: white;" to="about">About</router-link>
+        <router-link class="action" style="color: white;" to="/">Home</router-link>
 
     </nav>
 </template>
@@ -16,22 +16,28 @@ export default {
 }
 </script>
 
-<style scoped>
+<style >
     nav {
-        width: 100%;
-        height: 50px;
-        padding-top: 1.25%;
+        width: 100% !important;
+        height: 50px !important;
+        background: transparent !important;
     }
 
-    .header {
+    .header-text {
         padding-left: 0.5%;
         float: left;
         font-size: 20px;
     }
 
     .action {
-        padding-right: 15px;
+        padding-right: 20px;
         float:right;
+        display: inline-flex;
+        transition: 150ms ease-in-out;
+    }
+
+    .action:hover {
+        color: #ED4245 !important;
     }
 
     a:hover {
@@ -39,7 +45,7 @@ export default {
     }
 
     a {
-        transition: 150ms ease-in-out;
+        
         text-decoration: none;
     }
     
