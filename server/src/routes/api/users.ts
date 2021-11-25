@@ -13,14 +13,15 @@ let router = new express.Router();
 
 router.get('/@me', async(req: any, res: any) => {
     
-    // TODO: Fetch current user data
+    // TODO: Fetch current user data 
+    // !important - Token for this route
 
     res.send({
         id: 0,
         username: 'johndoe16',
         email: 'john@doe.com',
         tag: '0001',
-        balace: 0
+        balance: 0
     })
 
 })
@@ -37,7 +38,7 @@ router.get('/:id', async(req: any, res: any) => {
     res.send({
         id: req.params.id,
         username: d.username,
-        tag: '0000'
+        tag: d.tag ? d.tag : "0000"
     })
 })
 
