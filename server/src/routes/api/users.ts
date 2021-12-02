@@ -21,8 +21,11 @@ router.get('/@me', async(req: any, res: any) => {
         username: 'johndoe16',
         email: 'john@doe.com',
         tag: '0001',
-        balance: 0
+        balance: 111.20
     })
+
+
+    console.log("usesr/@me")
 
 })
 

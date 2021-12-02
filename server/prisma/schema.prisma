@@ -8,7 +8,7 @@ datasource db {
 }
 
 model users {
-  id        Int      @id @default(autoincrement())
+  id        Int   @id @default(autoincrement())
   username  String   @db.VarChar(18)
   firstname String?  @db.VarChar(30)
   lastname  String?  @db.VarChar(30)
@@ -17,4 +17,11 @@ model users {
   avatar    String?  @db.Text
   created   DateTime @default(now()) @db.DateTime(0)
   tag       Int
+  token     String  @unique @db.VarChar(18) @default(uuid())
+}
+
+model sessions {
+  id      Int    @id @default(autoincrement())
+  session String @db.Text 
+  user      Int @db.Int
 }
