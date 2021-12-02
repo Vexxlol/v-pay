@@ -18,9 +18,6 @@
             <button class="discord social">
                 <font-awesome-icon class="icon" :icon="['fab', 'discord']" /> Discord
             </button>
-            <button class="facebook social">
-                <font-awesome-icon class="icon" :icon="['fab', 'facebook']" /> Facebook
-            </button>
             
         </center>
     </div>

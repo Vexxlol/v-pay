@@ -16,7 +16,7 @@ export default {
 }
 </script>
 
-<style >
+<style>
     nav {
         width: 100% !important;
         height: 50px !important;
